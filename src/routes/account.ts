@@ -1,4 +1,4 @@
-import { Request, Response, Router } from "express";
+import { Router } from "express";
 import { getAccountByGameNameTagLine, getSummonerByPuuid } from "../controllers/accountController";
 
 const router = Router();
