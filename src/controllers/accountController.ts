@@ -1,9 +1,9 @@
 import axios from "axios";
 import { Request, Response } from "express";
+const riotApiKey = process.env.RIOT_API_KEY;
 
 export const getAccountByGameNameTagLine = async (req: Request, res: Response) => {
     const { gameName, tagLine } = req.params;
-    const riotApiKey = process.env.RIOT_API_KEY;
 
     if (!riotApiKey) {
         return res.status(500).send({ message: 'API key is not configured' });
